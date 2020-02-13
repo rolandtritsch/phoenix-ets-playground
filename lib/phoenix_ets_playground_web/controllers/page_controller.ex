@@ -3,10 +3,11 @@ defmodule PhoenixEtsPlaygroundWeb.PageController do
 
   # alias PhoenixEtsPlayground.Ets, as: Ets
   # alias PhoenixEtsPlayground.DEts, as: Ets
-  alias PhoenixEtsPlayground.Mnesia, as: Ets
+  # alias PhoenixEtsPlayground.Mnesia, as: Ets
+  alias PhoenixEtsPlayground.EtsSupervisor, as: Ets
 
   def start(conn, _params) do
-    {:ok, _} = GenServer.start(Ets, [], name: :kvs)
+    {:ok, _} = Ets.start([])
 
     conn
     |> put_status(:ok)

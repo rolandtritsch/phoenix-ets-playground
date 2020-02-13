@@ -8,3 +8,5 @@ config :phoenix_ets_playground, PhoenixEtsPlaygroundWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+# config :logger, level: :info
+# config :logger, level: :debug
